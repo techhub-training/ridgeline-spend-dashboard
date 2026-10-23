@@ -14,20 +14,18 @@ Click **Use this template › Create a new repository**. Keep the name `ridgelin
 
 ## Open it
 
-**In your browser (nothing to install):** on your copy of this repository, click **Code › Codespaces › Create codespace on main**.
-The app installs and starts by itself, and a preview opens in a few minutes. Stop the codespace when you're done
-(github.com/codespaces › ••• › Stop) so it doesn't use your free hours.
+On your copy of this repository, click **Code › Codespaces › Create codespace on main**. Everything runs in the
+codespace, in your browser: Python, the packages and Claude Code are already installed, the app starts by itself,
+and a preview opens in a few minutes. Type `claude` in the terminal to work with Claude Code (sign in the first time).
+Stop the codespace when you're done (github.com/codespaces › ••• › Stop) so it doesn't use your free hours.
 
-**On your computer:** you need Python 3.10 or newer and Git.
+## Where your data goes (Level 2, Processing on a server)
 
-```
-git clone https://github.com/<you>/ridgeline-spend-dashboard.git
-cd ridgeline-spend-dashboard
-python -m venv .venv
-source .venv/bin/activate          # Windows PowerShell: .venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-streamlit run app.py
-```
+| Question | Answer |
+|---|---|
+| Who runs the code? | Streamlit Community Cloud runs `app.py`. |
+| Where does the data go? | The invoices ship with the app in `data/ridgeline_ap.db`, opened read-only. Filters, totals and charts are worked out in memory for each visitor and kept nowhere. A download is the visitor's own copy. |
+| Who can reach it? | Anyone with the link sees the same made-up data. There is no key, so nothing to protect but the data itself. |
 
 ## Your task
 
