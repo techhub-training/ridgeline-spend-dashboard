@@ -16,3 +16,12 @@ What the solution does, TODO by TODO:
 All three months: 375 invoices, 791,972.86. Lumber is the largest category (137,598.17); Lighting the smallest (3,609.88).
 
 To publish: share.streamlit.io › Create app › this repository, branch `main`, file `app.py`. No secrets needed.
+
+## Where your data goes (Level 2, Processing on a server)
+
+| Question | Answer |
+|---|---|
+| Who runs the code? | Streamlit Community Cloud runs `app.py`. |
+| Where does the data go? | The invoices ship with the app in `data/ridgeline_ap.db`, opened read-only. Filters, totals and charts are worked out in memory for each visitor and kept nowhere. A download is the visitor's own copy. |
+| Who can reach it? | Anyone with the link sees the same made-up data. There is no key, so nothing to protect but the data itself. |
+
